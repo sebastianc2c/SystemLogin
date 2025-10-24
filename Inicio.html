@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CitAlert - Inicio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      /*background: linear-gradient(135deg, #ff0000 0%, #ff3838 100%);*/
+      background-image: url('imgs/fondoo.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .inicio-container {
+      background: #fff;
+      padding: 36px 32px 28px 32px;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(44, 62, 80, 0.18);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 320px;
+      max-width: 350px;
+      box-shadow: 0 2px 8px rgba(44, 62, 80, 0.18);
+    }
+    header {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+    header img {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+      margin-bottom: 8px;
+      border-radius: 50%;
+      border: 3px solid #ff4f4f;
+      background: #f7fbff;
+    }
+    header h1 {
+      color: #222;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin: 0;
+      font-size: 2.1rem;
+    }
+    .btn {
+      background: linear-gradient(90deg, #731212 60%, #7a1414 100%);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 13px 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+      transition: background 0.8s, transform 0.1s;
+      margin: 18px 0 10px 0;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: linear-gradient(90deg, #ff0202 60%, #ff0000 100%);
+      transform: translateY(-2px) scale(1.03);
+    }
+    .registro-link {
+      color: #e74c3c;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .registro-link:hover {
+      color: #c0392b;
+      text-decoration: underline;
+    }
+    p {
+      margin: 0 0 10px 0;
+      color: #444;
+      font-size: 1.05rem;
+      text-align: center;
+    }
+    @media (max-width: 480px) {
+      .inicio-container {
+        min-width: 90vw;
+        padding: 18px 8vw 18px 8vw;
+      }
+      header img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="inicio-container">
+    <header>
+      <img src="https://us.123rf.com/450wm/juliarstudio/juliarstudio1809/juliarstudio180910511/107739162-light-red-bulb-icon-isometric-3d-style.jpg" alt="CitAlert Logo">
+      <h1>CITALERT</h1>
+    </header>
+    <p>¡Empieza ahora!</p>
+    <a href="Mapa.html" class="btn">Iniciar con Correo</a>
+    <p>¿Todavía no tienes una cuenta? 
+      <a href="Registro.html" class="registro-link">Crear cuenta</a>
+    </p>
+  </div>
+</body>
+</html>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
