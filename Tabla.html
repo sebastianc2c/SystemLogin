@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <style>   body {
+      /*background: linear-gradient(135deg, #ff0000 0%, #ff3838 100%);*/
+      background-image: url('imgs/fondoo.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .inicio-container {
+      background: #fff;
+      padding: 36px 32px 28px 32px;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(44, 62, 80, 0.18);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 320px;
+      max-width: 350px;
+      box-shadow: 0 2px 8px rgba(44, 62, 80, 0.18);
+    }
+    header {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+    header img {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+      margin-bottom: 8px;
+      border-radius: 50%;
+      border: 3px solid #ff4f4f;
+      background: #f7fbff;
+    }
+    header h1 {
+      color: #222;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin: 0;
+      font-size: 2.1rem;
+    }
+    .btn {
+      background: linear-gradient(90deg, #731212 60%, #7a1414 100%);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 13px 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+      transition: background 0.8s, transform 0.1s;
+      margin: 18px 0 10px 0;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: linear-gradient(90deg, #ff0202 60%, #ff0000 100%);
+      transform: translateY(-2px) scale(1.03);
+    }
+    .registro-link {
+      color: #e74c3c;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .registro-link:hover {
+      color: #c0392b;
+      text-decoration: underline;
+    }
+    p {
+      margin: 0 0 10px 0;
+      color: #444;
+      font-size: 1.05rem;
+      text-align: center;
+    }
+    @media (max-width: 480px) {
+      .inicio-container {
+        min-width: 90vw;
+        padding: 18px 8vw 18px 8vw;
+      }
+      header img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+    </style>
+</head>
+<body>
+   <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Usuario</th>
+      <th scope="col">Reporte</th>
+      <th scope="col">Destinatario</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Lugar del problema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Sebastian Castillo</th>
+      <td>Internet</td>
+      <td>IT</td>
+      <td>El internet no funciona</td>
+      <td>Lab 9</td>
+    </tr>
+    <tr>
+      <th scope="row">Liang Solano</th>
+      <td>Estructura</td>
+      <td>Mantenimiento</td>
+      <td>Una puerta está rota y se cayó</td>
+      <td>Lab 5</td>
+    </tr>
+    <tr>
+      <th scope="row">Javier Martinez</th>
+      <td colspan="2">Sistema</td>
+      <td>Teams no esta funcionando correctamente</td>
+      <td>Lab 3</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

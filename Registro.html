@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CitAlert - Registro</title>
+  <link rel="stylesheet" href="css/regis.css">
+  <style>
+    body {
+  /*background: linear-gradient(135deg, #ff0000 0%, #ff0000 100%);*/
+  background-image: url('imgs/fondoo.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+header h2 {
+  color: #222;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+form, .form-container {
+  background: #fff;
+  padding: 32px 28px 24px 28px;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(44, 62, 80, 0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 320px;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+  padding: 12px 14px;
+  border: 1.5px solid #d1e3fa;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f7fbff;
+  transition: border 0.2s;
+  outline: none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus {
+  border: 1.5px solid #ff0000;
+  background: #eef6ff;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,<svg width='20' height='20' viewBox='0 0 20 20' fill='gray' xmlns='http://www.w3.org/2000/svg'><path d='M5 8L10 13L15 8' stroke='gray' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 18px 18px;
+}
+
+.btn {
+  background: linear-gradient(90deg, #851111 60%, #851212 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 13px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+  transition: background 0.2s, transform 0.1s;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #ff0000 60%, #ff0000 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+@media (max-width: 480px) {
+  form, .form-container {
+    min-width: 90vw;
+    padding: 18px 8vw 18px 8vw;
+  }
+  header img {
+    width: 60px;
+    height: 60px;
+  }
+}
+    header img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-top: 10px;
+    }
+   </style>
+</head>
+<body>
+  <header>
+    <img src="https://us.123rf.com/450wm/juliarstudio/juliarstudio1809/juliarstudio180910511/107739162-light-red-bulb-icon-isometric-3d-style.jpg" alt="CitAlert Logo">
+    <h2>Crear cuenta en CitAlert:</h2>
+  </header>
+ <div class="form-container">
+    <input type="text" id="nombre" placeholder="Nombre" required>
+    <input type="text" id="email"  placeholder="Correo" required>
+    <input type="password" id="pass" placeholder="Contraseña" required>
+
+    <select id="rol" required>
+      <option value="" disabled selected>Selecciona tu rol</option>
+      <option value="profesor">Profesor</option>
+      <option value="estudiante">Estudiante</option>
+      <option value="administrador">Administrador</option>
+    </select>
+
+    <select id="grado" required>
+      <option value="" disabled selected>Selecciona tu grado</option>
+      <option value="Septimo">Septimo</option>
+      <option value="Octavo">Octavo</option>
+      <option value="Noveno">Noveno</option>
+      <option value="Decimo">Decimo</option>
+      <option value="Undecimo">Undecimo</option>
+      <option value="Duodecimo">Duodecimo</option>
+    </select>
+
+     <button onclick="crearUsuario();" class="btn">Crear cuenta</button>
+
+</div>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+  <script src="basededatos.js"></script>
+
+</body>
+</html>

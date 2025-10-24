@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CitAlert - Mapa</title>
+  <link rel="stylesheet" href="css/regis.css">
+  <style>
+  body {
+  /*background: linear-gradient(135deg, #f80000ea 0%, #f90000 100%);*/
+  background-image: url('imgs/fondoo.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+header {
+  text-align: center;
+  margin: 36px 0 18px 0;
+}
+
+header h2 {
+  color: #222;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.mapa {
+  background: #fff;
+  padding: 18px 18px 12px 18px;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(44, 62, 80, 0.18);
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mapa img {
+  max-width: 90vw;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.10);
+}
+
+select {
+  padding: 12px 14px;
+  border: 1.5px solid #d1e3fa;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f7fbff;
+  margin: 8px 0;
+  min-width: 260px;
+  transition: border 0.2s;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,<svg width='20' height='20' viewBox='0 0 20 20' fill='gray' xmlns='http://www.w3.org/2000/svg'><path d='M5 8L10 13L15 8' stroke='gray' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 18px 18px;
+}
+
+select:focus {
+  border: 1.5px solid #4f8cff;
+  background: #eef6ff;
+}
+
+.btn, a.btn {
+  background: linear-gradient(90deg, #9a1515 60%, #801717 100%);
+  color: #fff !important;
+  border: none;
+  border-radius: 8px;
+  padding: 13px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+  transition: background 0.2s, transform 0.1s;
+  margin-top: 18px;
+  width: 100%;
+  max-width: 260px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover, a.btn:hover {
+  background: linear-gradient(90deg, #ff0000 60%, #ff0000 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+@media (max-width: 600px) {
+  .mapa {
+    padding: 8px 2vw 8px 2vw;
+  }
+  .mapa img {
+    max-width: 98vw;
+  }
+  select, .btn, a.btn {
+    min-width: 70vw;
+    max-width: 98vw;
+  }
+}
+    header img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-top: 10px;
+    }
+    header img {
+      width: 100px;
+    }
+   </style>
+</head>
+<body>
+  <header>
+    <h2>Mapa Interactivo</h2>
+  </header>
+
+  <div class="mapa">
+    <img src="imgs/Mapa Steam.png" usemap="#mapa">
+  <map name="mapa">
+    <!-- Fila superior -->
+    <area shape="rect" coords="0,0,270,250" href="#" onclick="alert('Área seleccionada Lab 9')" alt="Lab 9">
+    <area shape="rect" coords="210,35,390,180" href="#" onclick="alert('Área seleccionada Lab ni')" alt="Lab ">
+    <area shape="rect" coords="390,35,570,180" href="#" onclick="alert('Área seleccionada Lab 10')" alt="Lab 10">
+    <area shape="rect" coords="570,35,755,180" href="#" onclick="alert('Área seleccionada Lab 11')" alt="Lab 11">
+    <area shape="rect" coords="855,35,1040,180" href="#" onclick="alert('Área seleccionada Lab 12')" alt="Lab 12">
+
+    <!-- Fila inferior -->
+    <area shape="rect" coords="35,355,260,510" href="#" onclick="alert('Área seleccionada Lab 8')" alt="Lab 8">
+    <area shape="rect" coords="500,355,720,510" href="#" onclick="alert('Área seleccionada Lab 7')" alt="Lab 7">
+    <area shape="rect" coords="855,355,1040,510" href="#" onclick="alert('Área seleccionada Lab 6')" alt="Lab 6">
+  </map>
+  </div>
+
+  <br>
+
+ <label for="feedback">Descripción del problema:</label>
+<textarea id="feedback" name="feedback" rows="4" cols="50">
+</textarea>
+<br><br>
+
+  <select required>
+      <option value="" disabled selected>Tipo de falla</option>
+      <option value="Internet">Internet</option>
+      <option value="Estructura">Estructura</option>
+      <option value="Sistema">Sistema</option>
+      <option value="Otro">Otro</option>
+    </select>
+
+     <select required>
+      <option value="" disabled selected>Reporte para</option>
+      <option value="Mantenimiento">Mantenimiento</option>
+      <option value="Administracion">Administracion</option>
+      <option value="IT">IT</option>
+    </select>
+<br><br>
+  <input type="file" id="imageUpload" name="image" accept="image/*">
+  <br><br>
+  <button class="btn" onclick="enviarReporte(event)">Enviar</button> <br><br>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+  <script src="basededatos.js"></script>
+</body>
+</html>
